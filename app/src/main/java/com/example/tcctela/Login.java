@@ -51,7 +51,7 @@ public class Login extends AppCompatActivity {
     }
 
     private void IniciarComponentes(){
-        text_tela_cadastro = findViewById(R.id.text_tela_cadastro);
+        text_tela_cadastro = findViewById(R.id.bt_criarConta);
     }
 
 }

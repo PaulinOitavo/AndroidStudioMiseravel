@@ -2,6 +2,7 @@ package com.example.tcctela;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,15 +15,13 @@ public class Cadastro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
 
-//        getSupportActionBar().hide();
-
         Button cadastro = findViewById(R.id.bt_criarConta);
 
         cadastro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(Login.this, Cadastro.class);
+                Intent intent = new Intent(Cadastro.this, Login.class);
 
                 startActivity(intent);
             }
