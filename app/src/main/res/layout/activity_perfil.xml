@@ -93,10 +93,12 @@
         app:layout_constraintTop_toBottomOf="@id/text_email_usuario"
         />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_deslogar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Deslogar"
+        android:onClick="login"
         android:textSize="18sp"
         android:textStyle="bold"
         android:textAllCaps="false"

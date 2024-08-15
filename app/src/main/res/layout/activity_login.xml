@@ -52,6 +52,7 @@
         android:id="@+id/containerComponents"
         style="@style/ContainerComponents"
         android:layout_marginTop="20dp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,34 +85,19 @@
         android:id="@+id/bt_entrar"
         style="@style/Button"
         android:text="@string/entrar"
+        android:onClick="perfil"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edit_senha"
     />
 
-    <ProgressBar
-        android:id="@+id/progressbar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:indeterminateTint="@color/black"
-        android:visibility="invisible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/containerComponents"
-    />
 
-    <TextView
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/text_tela_cadastro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/text_cadastro"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintTop_toBottomOf="@id/progressbar"
+        style="@style/Button"
+        android:text="Não possui conta? crie uma"
+        app:layout_constraintTop_toBottomOf="@id/bt_entrar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
     />

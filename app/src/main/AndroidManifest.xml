@@ -13,7 +13,7 @@
         android:theme="@style/Theme.TCCtela"
         tools:targetApi="31">
         <activity
-            android:name=".Login"
+            android:name=".Perfil"
             android:exported="false" />
         <activity
             android:name=".Cadastro"
@@ -22,7 +22,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".Perfil"
+            android:name=".Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
