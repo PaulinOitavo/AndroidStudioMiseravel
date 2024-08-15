@@ -91,12 +91,11 @@
         app:layout_constraintTop_toBottomOf="@id/edit_senha"
     />
 
-
-
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/text_tela_cadastro"
+        android:id="@+id/bt_criarConta"
         style="@style/Button"
-        android:text="Não possui conta? crie uma"
+        android:text="Não possui conta? Crie uma"
+        android:onClick="cadastro"
         app:layout_constraintTop_toBottomOf="@id/bt_entrar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
