@@ -17,41 +17,9 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Button perfil = findViewById(R.id.bt_entrar);
 
-        perfil.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(Login.this, Perfil.class);
-
-                startActivity(intent);
-
-
-            }
-        });
-
-
-
-
-
-
-//        getSupportActionBar().hide();
-        IniciarComponentes();
-
-        text_tela_cadastro.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(Login.this, Cadastro.class);
-                startActivity(intent);
-
-            }
-        });
-    }
-
-    private void IniciarComponentes(){
-        text_tela_cadastro = findViewById(R.id.bt_criarConta);
-    }
-
+        }
 }
+
+
+
