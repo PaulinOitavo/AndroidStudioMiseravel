@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1017457748230",
+    "project_id": "ouvidoria-f105f",
+    "storage_bucket": "ouvidoria-f105f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017457748230:android:2d65cc4f1b116694299687",
+        "android_client_info": {
+          "package_name": "com.example.tcctela"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPdfHgFdHrPmz5Enl7yBmblZC8T93A9Tk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

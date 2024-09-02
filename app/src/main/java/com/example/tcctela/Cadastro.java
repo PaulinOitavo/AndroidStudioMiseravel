@@ -15,7 +15,7 @@ public class Cadastro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
 
-        Button cadastro = findViewById(R.id.bt_criarConta);
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button cadastro = findViewById(R.id.bt_criarConta);
 
         cadastro.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,4 +27,16 @@ public class Cadastro extends AppCompatActivity {
             }
         });
     }
+
+
+
+
+
+
+
+
+
+
+
+
 }
