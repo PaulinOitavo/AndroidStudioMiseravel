@@ -42,9 +42,15 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
+
+
+    implementation("com.squareup.picasso:picasso:2.8")
+
     implementation(platform("com.google.firebase:firebase-bom:33.2.0"))
     implementation("com.google.firebase:firebase-auth:22.1.2")
     implementation("com.google.firebase:firebase-firestore:24.8.1")
+    implementation("com.github.bumptech.glide:glide:4.13.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.13.0")
 
 
 }

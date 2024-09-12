@@ -7,6 +7,7 @@
     android:background="@drawable/background"
     tools:context=".Historico">
 
+
     <TextView
         android:id="@+id/texto_topo"
         style="@style/texto_grande"
@@ -19,88 +20,65 @@
         app:layout_constraintTop_toTopOf="parent"
         />
 
-    <View
-        android:id="@+id/containerComponents"
-        style="@style/ContainerComponents"
-        android:layout_height="550dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <ImageView
+        android:id="@+id/icone_usuario"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_user"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
         app:layout_constraintTop_toBottomOf="@id/texto_topo"
+        app:layout_constraintStart_toStartOf="parent"
+    />
+    <TextView
+        android:id="@+id/nome_usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/texto_topo"
+        app:layout_constraintStart_toEndOf="@id/icone_usuario"
         />
 
-    <View
-        android:id="@+id/historico"
-        style="@style/ContainerHistoric"
+    <ImageView
+        android:id="@+id/icone_email"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_email"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        app:layout_constraintTop_toTopOf="@id/containerComponents"
+        app:layout_constraintTop_toBottomOf="@id/icone_usuario"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <TextView
+        android:id="@+id/email_usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/icone_usuario"
+        app:layout_constraintStart_toEndOf="@id/icone_email"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_sair"
+        style="@style/Button"
+        android:text="SAIR"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@id/email_usuario"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
 
-    <TextView
-        android:id="@+id/historicoTipo"
-        style="@style/historicoTexto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tipo: Denúncia"
-        android:layout_margin="20dp"
-        app:layout_constraintStart_toStartOf="@id/historico"
-        app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/historico"
-        />
 
-    <TextView
-        android:id="@+id/historicoTipo2"
-        style="@style/historicoTexto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Assunto: Água vazando da \nlâmpada do banheiro"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        app:layout_constraintStart_toStartOf="@id/historico"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/historicoTipo"
-        />
-
-    <TextView
-        android:id="@+id/historicoTipo3"
-        style="@style/historicoTexto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Descrição: Essa água além de ter
-        \nassustado, preencheu o banheiro
-        \ntornado perigoso andar por lá ..."
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        app:layout_constraintStart_toStartOf="@id/historico"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/historicoTipo2"
-        />
-
-    <TextView
-        android:id="@+id/historicoTipo4"
-        style="@style/historicoTexto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Instituição: ITB Paulista"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        app:layout_constraintStart_toStartOf="@id/historico"
-        app:layout_constraintTop_toBottomOf="@id/historicoTipo3"
-        />
-
-    <TextView
-        android:id="@+id/historicoTipo5"
-        style="@style/historicoTexto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Foto: sem foto"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        app:layout_constraintStart_toStartOf="@id/historico"
-        app:layout_constraintTop_toBottomOf="@id/historicoTipo4"
-        />
 
 
 
