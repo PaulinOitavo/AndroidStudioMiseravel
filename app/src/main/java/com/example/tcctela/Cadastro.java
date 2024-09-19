@@ -91,6 +91,8 @@ public class Cadastro extends AppCompatActivity {
                      snackbar.setBackgroundTint(Color.WHITE);
                      snackbar.setTextColor(Color.BLACK);
                      snackbar.show();
+
+                     Login();
                  } else {
                      String erros;
                      try {
@@ -114,6 +116,11 @@ public class Cadastro extends AppCompatActivity {
             }
         });
 
+    }
+    private void Login(){
+        Intent intent = new Intent(Cadastro.this, Login.class);
+        startActivity(intent);
+        finish();
     }
 
     private void SalvarDadosUsuario(){

@@ -31,18 +31,20 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Button cadastro = findViewById(R.id.bt_entrar);
 
-        cadastro.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                Intent intent = new Intent(Login.this, Historico.class);
-
-                startActivity(intent);
-
-            }
-        });
+//        Button cadastro = findViewById(R.id.bt_entrar);
+//
+//        cadastro.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+////                Intent intent = new Intent(Login.this, Historico.class);
+////
+////                startActivity(intent);
+//
+//            }
+//        });
 
         IniciarComponentes();
 
