@@ -54,7 +54,7 @@
         android:id="@+id/edit_senha"
         style="@style/Edit_Text"
         android:hint="Senha"
-        android:inputType="numberPassword"
+        android:inputType="textPassword"
         android:drawableRight="@drawable/ic_eye"
         app:layout_constraintTop_toBottomOf="@id/edit_email"
         app:layout_constraintStart_toStartOf="@id/containerComponents"

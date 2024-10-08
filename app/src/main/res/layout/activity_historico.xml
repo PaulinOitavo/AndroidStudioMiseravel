@@ -68,19 +68,134 @@
         app:layout_constraintStart_toEndOf="@id/icone_email"
         />
 
+    <View
+        android:id="@+id/containerComponents"
+        style="@style/ContainerComponents"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email_usuario"
+        />
+
+    <TextView
+        android:id="@+id/criacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data de criação:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20sp"
+        app:layout_constraintTop_toTopOf="@id/containerComponents"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        />
+
+    <TextView
+        android:id="@+id/criacao2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20sp"
+        app:layout_constraintTop_toBottomOf="@id/criacao"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        />
+
+    <TextView
+        android:id="@+id/idusu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adm responsável:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20sp"
+        app:layout_constraintTop_toBottomOf="@id/criacao2"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        />
+
+    <TextView
+        android:id="@+id/idusu2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20sp"
+        app:layout_constraintTop_toBottomOf="@id/idusu"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        />
+
+    <TextView
+        android:id="@+id/assunto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resposta:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20sp"
+        app:layout_constraintTop_toBottomOf="@id/idusu2"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        />
+
+    <TextView
+        android:id="@+id/assunto2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20sp"
+        android:maxWidth="350dp"
+        app:layout_constraintTop_toBottomOf="@id/assunto"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status atual:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20sp"
+        app:layout_constraintTop_toBottomOf="@id/assunto2"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        />
+
+    <TextView
+        android:id="@+id/status2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20sp"
+        app:layout_constraintTop_toBottomOf="@id/status"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bt_sair"
         style="@style/Button"
         android:text="SAIR"
-        android:layout_marginTop="50dp"
-        app:layout_constraintTop_toBottomOf="@id/email_usuario"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/containerComponents"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
-
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
