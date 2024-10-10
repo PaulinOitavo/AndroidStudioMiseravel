@@ -8,14 +8,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.google.android.material.snackbar.Snackbar;
 
 public class Cadastro extends AppCompatActivity {
 
-    private EditText edit_nome, edit_email, edit_senha;
+    private EditText edit_nome, edit_email, edit_senha, edit_confirmasenha;
     private Button bt_criarConta;
-    private String[] mensagens = {"Preencha todos os campos", "Cadastro realizado com sucesso", "Erro ao cadastrar usuário"};
+    private ImageView left_arrow;
+    private String[] mensagens = {"Preencha todos os campos", "As senhas não coincidem", "Cadastro realizado com sucesso", "Erro ao cadastrar usuário"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +32,20 @@ public class Cadastro extends AppCompatActivity {
             String nome = edit_nome.getText().toString();
             String email = edit_email.getText().toString();
             String senha = edit_senha.getText().toString();
+            String confirmarSenha = edit_confirmasenha.getText().toString();
             String acesso = "user"; // Define o nível de acesso. Pode ajustar conforme necessário
             String statusUsuario = "ativo"; // Define o status do usuário
 
             // Verifica se todos os campos estão preenchidos
-            if (nome.isEmpty() || email.isEmpty() || senha.isEmpty()) {
+            if (nome.isEmpty() || email.isEmpty() || senha.isEmpty() || confirmarSenha.isEmpty()) {
                 // Exibe mensagem se algum campo estiver vazio
                 Snackbar snackbar = Snackbar.make(v, mensagens[0], Snackbar.LENGTH_SHORT);
+                snackbar.setBackgroundTint(Color.WHITE);
+                snackbar.setTextColor(Color.BLACK);
+                snackbar.show();
+            } else if (!senha.equals(confirmarSenha)) {
+                // Verifica se as senhas coincidem
+                Snackbar snackbar = Snackbar.make(v, mensagens[1], Snackbar.LENGTH_SHORT);
                 snackbar.setBackgroundTint(Color.WHITE);
                 snackbar.setTextColor(Color.BLACK);
                 snackbar.show();
@@ -44,6 +53,10 @@ public class Cadastro extends AppCompatActivity {
                 // Chama o método para cadastrar o usuário
                 CadastrarUsuario(nome, email, senha, acesso, statusUsuario, v);
             }
+        });
+
+        left_arrow.setOnClickListener(v -> {
+            finish();
         });
     }
 
@@ -54,7 +67,7 @@ public class Cadastro extends AppCompatActivity {
 
         if (sucesso) {
             // Se o cadastro for bem-sucedido, exibe mensagem de sucesso
-            Snackbar snackbar = Snackbar.make(v, mensagens[1], Snackbar.LENGTH_SHORT);
+            Snackbar snackbar = Snackbar.make(v, mensagens[2], Snackbar.LENGTH_SHORT);
             snackbar.setBackgroundTint(Color.WHITE);
             snackbar.setTextColor(Color.BLACK);
             snackbar.show();
@@ -65,18 +78,23 @@ public class Cadastro extends AppCompatActivity {
             finish();
         } else {
             // Se ocorrer um erro no cadastro, exibe mensagem de erro
-            Snackbar snackbar = Snackbar.make(v, mensagens[2], Snackbar.LENGTH_SHORT);
+            Snackbar snackbar = Snackbar.make(v, mensagens[3], Snackbar.LENGTH_SHORT);
             snackbar.setBackgroundTint(Color.WHITE);
             snackbar.setTextColor(Color.BLACK);
             snackbar.show();
         }
+
+
     }
+
 
     // Método para inicializar os componentes da tela
     private void IniciarComponentes() {
         edit_nome = findViewById(R.id.edit_nome);
         edit_email = findViewById(R.id.edit_email);
         edit_senha = findViewById(R.id.edit_senha);
+        edit_confirmasenha = findViewById(R.id.edit_confirmasenha);
         bt_criarConta = findViewById(R.id.bt_criarConta);
+        left_arrow = findViewById(R.id.left_arrow);
     }
 }

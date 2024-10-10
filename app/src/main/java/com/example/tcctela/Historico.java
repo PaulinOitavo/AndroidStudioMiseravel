@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.sql.ResultSet;
 import java.util.List;
 
 public class Historico extends AppCompatActivity {
@@ -30,6 +32,8 @@ public class Historico extends AppCompatActivity {
 
         // Inicializa os componentes da interface
         IniciarComponentes();
+
+        carregarUsuarioIdDoBanco(1);
 
         // Recupera os dados armazenados no SharedPreferences
         sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
@@ -97,6 +101,27 @@ public class Historico extends AppCompatActivity {
                             dataCadastroView.setText("Data não encontrada");
                             providenciaView.setText("Providência não disponível");
                             statusHistView.setText("Status não disponível");
+                        }
+                    }
+                });
+            }
+        }).start();
+    }
+
+    private void carregarUsuarioIdDoBanco(int manifestoId) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                final int usuarioId = ConexaoBD.getUsuarioIdByManifesto(manifestoId);
+
+                // Atualizar a interface na thread principal
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (usuarioId != -1) {
+                            usuarioIdTextView.setText("ID do usuário: " + usuarioId);
+                        } else {
+                            usuarioIdTextView.setText("Usuário não encontrado");
                         }
                     }
                 });

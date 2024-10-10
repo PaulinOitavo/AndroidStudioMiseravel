@@ -8,9 +8,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/sac"
+        android:icon="@drawable/logosac2topzera"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/sac"
+        android:roundIcon="@drawable/logosac2topzera"
         android:supportsRtl="true"
         android:theme="@style/Theme.TCCtela"
         tools:targetApi="31">

@@ -14,7 +14,7 @@ import java.util.List;
 
 public class ConexaoBD {
 
-    private static final String DB_URL = "jdbc:jtds:sqlserver://172.19.1.169/bdtccOeo"; // Lembre se de trocar toda vez que trocar de máquina
+    private static final String DB_URL = "jdbc:jtds:sqlserver://172.19.0.103/bdtccOeo"; // Lembre se de trocar toda vez que trocar de máquina
     private static final String USER = "sa";
     private static final String PASS = "@ITB123456";
 
@@ -229,5 +229,34 @@ public class ConexaoBD {
             closeConnection(conn);
         }
     }
+
+    public static int getUsuarioIdByManifesto(int manifestoId) {
+        Connection conn = conectar();
+        if (conn == null) {
+            return -1; // Erro ao conectar
+        }
+
+        try {
+            // Consulta para obter o ID do usuário associado ao manifesto
+            String query = "SELECT usuario_id FROM HistoricoManifesto WHERE manifesto_id = ?";
+            PreparedStatement stmt = conn.prepareStatement(query);
+            stmt.setInt(1, manifestoId);
+
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                return rs.getInt("usuario_id");  // Retorna o ID do usuário associado ao manifesto
+            } else {
+                return -1;  // Nenhum usuário encontrado
+            }
+        } catch (Exception e) {
+            Log.e("ConexaoBD", "Erro ao buscar usuário por manifesto: " + e.getMessage());
+            e.printStackTrace();
+            return -1;
+        } finally {
+            closeConnection(conn);
+        }
+    }
+
 
 }

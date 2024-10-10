@@ -84,8 +84,6 @@ public class Login extends AppCompatActivity {
     private void loginUser() {
         Intent intent = new Intent(Login.this, Historico.class);
 
-        // Passe o email e qualquer outra informação necessária para a próxima Activity
-
         startActivity(intent);
         finish();
     }
